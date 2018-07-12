@@ -25,15 +25,9 @@ module.exports = {
     // 本地服务器
     devServer: {
         // 服务器文件路径
-        contentBase: './dist',
-        // 不跳转url
-        historyApiFallback: true,
-        // inline模式url不用变化
-        inline: true,
-        // 热更新
-        hot: true,
+        contentBase: __dirname + '/dist',
         // 开启GZIP
-        compress: true,
+        // compress: true
     },
 
     module: {
