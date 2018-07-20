@@ -1,5 +1,5 @@
 {
-  "name": "webgl-learning",
+  "name": "webpack-project-cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yujinpan/WebGL-Learning.git"
+    "url": "git+https://github.com/yujinpan/webpack-project-cli.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yujinpan/WebGL-Learning/issues"
+    "url": "https://github.com/yujinpan/webpack-project-cli/issues"
   },
-  "homepage": "https://github.com/yujinpan/WebGL-Learning#readme",
+  "homepage": "https://github.com/yujinpan/webpack-project-cli#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
