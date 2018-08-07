@@ -26,7 +26,7 @@ module.exports = merge(baseWebpackConfig, {
     },
 
     // 开发模式
-    devtool: 'cheap-source-map',
+    devtool: 'source-map',
 
     // 本地服务器
     devServer: {

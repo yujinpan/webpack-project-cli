@@ -7,7 +7,6 @@ module.exports = {
     // 入口文件路径
     entry: {
         app: path.resolve(__dirname, '../bootstrap.js'),
-        vendor: ['jquery', 'lodash']
     },
 
     // 输出
@@ -76,24 +75,26 @@ module.exports = {
             template: path.resolve(__dirname, '../index.html')
         }),
 
-        // 提取库公共模块
+        // 提取第三方库
         new webpack.optimize.CommonsChunkPlugin({
-
-            // 对应entry数组vender
             name: 'vendor',
             filename: 'js/vendor-[chunkhash:6].js',
-
-            // 保证没有其他模块打包进该模块
-            minChunks: Infinity
+            minChunks: function(module) {
+                return (
+                    module.resource &&
+                    /\.js$/.test(module.resource) &&
+                    module.resource.indexOf(
+                        path.join(__dirname, '../node_modules')
+                    ) === 0
+                );
+            }
         }),
 
-        // 提取自定义公共模块
+        // 提取自定义的导入的公共模块
         new webpack.optimize.CommonsChunkPlugin({
-
-            name: 'app',
-            async: 'vendor-async',
-            children: true,
-            minChunks: 3
+            name: 'common',
+            filename: 'js/common-[chunkhash:6].js',
+            minChunks: Infinity
         })
     ]
 };
