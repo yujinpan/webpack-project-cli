@@ -55,6 +55,6 @@
   "dependencies": {
     "bootstrap": "^3.4.1",
     "jquery": "^3.4.0",
-    "lodash": "^4.17.13"
+    "lodash": "^4.17.21"
   }
 }
